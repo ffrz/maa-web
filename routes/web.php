@@ -25,6 +25,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'index']);
+Route::get('/jadwal-kajian-rutin-salafy-ciktabar', [HomeController::class, 'baseSchedule']);
+Route::get('/agenda-kajian-salafy-ciktabar', [HomeController::class, 'schedule']);
 
 Route::redirect('/admin', '/admin/dashboard');
 

@@ -12,6 +12,21 @@ class HomeController extends Controller
     //
     public function index()
     {
+        return view('public.index');
+    }
+
+    public function baseSchedule()
+    {
+        
+        $base_items = Event::all();       
+
+        $year = date('Y');
+        
+        return view('public.base-schedule', compact('base_items', 'year'));
+    }
+
+    public function schedule()
+    {
         
         $base_items = Event::all();
 
@@ -58,6 +73,6 @@ class HomeController extends Controller
             $schedule_items[$month] = $items;
         }
 
-        return view('public.home.index', compact('base_items', 'year', 'schedule_items'));
+        return view('public.schedule', compact('base_items', 'year', 'schedule_items'));
     }
 }
