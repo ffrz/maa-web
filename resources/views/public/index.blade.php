@@ -1,4 +1,7 @@
-<?php $nav_active = 'home' ?>
+<?php
+  $nav_active = 'home';
+  $title = 'Beranda';
+?>
 @extends('public.layout')
 @section('content')
   <section>

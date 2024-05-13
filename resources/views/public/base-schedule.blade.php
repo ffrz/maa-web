@@ -1,10 +1,13 @@
-<?php $nav_active = 'base-schedule' ?>
+<?php
+  $nav_active = 'base-schedule';
+  $title = 'Jadwal Kajian Rutin '  . $year;
+?>
 @extends('public.layout')
 @section('content')
-  <section>
+  <section class="table-responsive">
     <h1>Jadwal Kajian Rutin Salafy Ciktabar 2024</h1>
-    <table class="table table-striped table-hover table-sm">
-      <thead>
+    <table class="table table-striped table-hover table-sm table-bordered">
+      <thead class="table-light">
         <tr>
           <th>Pekan ke</th>
           <th>Hari</th>
